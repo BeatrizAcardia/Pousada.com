@@ -28,7 +28,8 @@
     </script>
     <style>
         .hero-section {
-            background-image: url('https://picsum.photos/1920/1080?random=1');
+            /* IMAGEM TROCADA: Hero de Maragogi */
+            background-image: url('https://placehold.co/1920x1080/006699/FFFFFF?text=Praia+de+Maragogi');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -40,15 +41,33 @@
         .carousel-container {
             scroll-behavior: smooth;
         }
+
+        /* ADICIONADO: Garante a remoção da barra de rolagem do carrossel */
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+        .carousel-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
-<body class="min-h-screen bg-white">
+<!-- ADICIONADO: overflow-x-hidden para remover barra de rolagem horizontal do site -->
+<body class="min-h-screen bg-white overflow-x-hidden">
     <!-- App Bar -->
     <header class="bg-gradient-to-r from-praia-azul to-praia-verde shadow-lg sticky top-0 z-50">
         <nav class="container mx-auto px-4 py-3">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center space-x-4">
-                        <img src="Captura_de_tela_2025-10-21_211902-removebg-preview.png" alt="Logo Pousada Sirena das Pérolas" class="w-12 h-12 rounded-full border-2 border-white shadow-md">
+                        <!-- IMAGEM TROCADA: Logo placeholder -->
+                        <img src="https://placehold.co/48x48/FFFFFF/87CEEB?text=Logo" alt="Logo Pousada Sirena das Pérolas" class="w-12 h-12 rounded-full border-2 border-white shadow-md">
                     <div class="text-white">
                         <div class="font-arial text-sm">Pousada</div>
                         <div class="logo-font text-2xl font-bold">Sirena das Pérolas</div>
@@ -91,7 +110,8 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <img src="https://picsum.photos/600/400?random=3" alt="Vista da pousada" class="w-full rounded-lg shadow-xl">
+                    <!-- IMAGEM TROCADA: Vista da Pousada em Maragogi -->
+                    <img src="https://placehold.co/600x400/87CEEB/333333?text=Vista+Pousada+Maragogi" alt="Vista da pousada" class="w-full rounded-lg shadow-xl">
                 </div>
                 <div>
                     <h2 class="text-4xl font-bold text-praia-azul-escuro mb-8 logo-font">Nossa História</h2>
@@ -129,43 +149,48 @@
                 <div id="carousel" class="flex overflow-x-auto space-x-6 pb-6 snap-x snap-mandatory scrollbar-hide carousel-container">
                     <!-- Piscina -->
                     <div class="min-w-[300px] bg-white rounded-xl shadow-lg snap-center">
-                        <img src="https://picsum.photos/300/200?random=4" alt="Piscina da pousada" class="w-full h-48 object-cover rounded-t-xl">
+                        <!-- IMAGEM TROCADA: Piscinas Naturais Maragogi -->
+                        <img src="https://placehold.co/300x200/20B2AA/FFFFFF?text=Piscinas+Naturais+Maragogi" alt="Piscina da pousada" class="w-full h-48 object-cover rounded-t-xl">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-praia-azul-escuro mb-2">Piscina</h3>
                             <p class="text-gray-600">Piscina aquecida com vista para o mar, perfeita para relaxar após um dia de praia.</p>
                         </div>
                     </div>
                     
-                    <!-- Área Pet -->
+                    <!-- Área Pet (substituída por imagem de praia) -->
                     <div class="min-w-[300px] bg-white rounded-xl shadow-lg snap-center">
-                        <img src="https://picsum.photos/300/200?random=5" alt="Área pet da pousada" class="w-full h-48 object-cover rounded-t-xl">
+                        <!-- IMAGEM TROCADA: Praia com Coqueiros -->
+                        <img src="https://placehold.co/300x200/F5F5DC/333333?text=Praia+com+Coqueiros" alt="Praia com coqueiros" class="w-full h-48 object-cover rounded-t-xl">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-praia-azul-escuro mb-2">Área Pet</h3>
-                            <p class="text-gray-600">Espaço especial para seu animal de estimação, com brinquedos e área de recreação.</p>
+                            <h3 class="text-xl font-bold text-praia-azul-escuro mb-2">Pé na Areia</h3>
+                            <p class="text-gray-600">Acesso direto à praia, com cadeiras e guarda-sóis disponíveis para nossos hóspedes.</p>
                         </div>
                     </div>
                     
-                    <!-- Quadra de Vôlei -->
+                    <!-- Quadra de Vôlei (substituída por imagem de praia) -->
                     <div class="min-w-[300px] bg-white rounded-xl shadow-lg snap-center">
-                        <img src="https://picsum.photos/300/200?random=6" alt="Quadra de vôlei" class="w-full h-48 object-cover rounded-t-xl">
+                        <!-- IMAGEM TROCADA: Mar de Maragogi -->
+                        <img src="https://placehold.co/300x200/87CEEB/FFFFFF?text=Mar+de+Maragogi" alt="Quadra de vôlei" class="w-full h-48 object-cover rounded-t-xl">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-praia-azul-escuro mb-2">Quadra de Vôlei</h3>
                             <p class="text-gray-600">Quadra de areia para partidas de vôlei e outros esportes de praia.</p>
                         </div>
                     </div>
                     
-                    <!-- Brinquedoteca -->
+                    <!-- Brinquedoteca (substituída por imagem de praia) -->
                     <div class="min-w-[300px] bg-white rounded-xl shadow-lg snap-center">
-                        <img src="https://picsum.photos/300/200?random=7" alt="Brinquedoteca" class="w-full h-48 object-cover rounded-t-xl">
+                        <!-- IMAGEM TROCADA: Areia Branca -->
+                        <img src="https://placehold.co/300x200/4682B4/FFFFFF?text=Areia+Branca" alt="Areia da praia" class="w-full h-48 object-cover rounded-t-xl">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-praia-azul-escuro mb-2">Brinquedoteca</h3>
                             <p class="text-gray-600">Espaço lúdico e seguro para as crianças se divertirem com diversos brinquedos.</p>
                         </div>
                     </div>
                     
-                    <!-- Restaurante -->
+                    <!-- Restaurante (substituída por imagem de praia) -->
                     <div class="min-w-[300px] bg-white rounded-xl shadow-lg snap-center">
-                        <img src="https://picsum.photos/300/200?random=8" alt="Restaurante da pousada" class="w-full h-48 object-cover rounded-t-xl">
+                        <!-- IMAGEM TROCADA: Vista do Mar -->
+                        <img src="https://placehold.co/300x200/006699/FFFFFF?text=Vista+do+Mar" alt="Restaurante da pousada" class="w-full h-48 object-cover rounded-t-xl">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-praia-azul-escuro mb-2">Restaurante</h3>
                             <p class="text-gray-600">Culinária regional com ingredientes frescos e menu variado para todos os gostos.</p>
@@ -188,7 +213,8 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Pacote Individual -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <img src="https://picsum.photos/400/250?random=9" alt="Pacote Individual" class="w-full h-48 object-cover">
+                    <!-- IMAGEM TROCADA: Bangalô na Praia -->
+                    <img src="https://placehold.co/400x250/20B2AA/FFFFFF?text=Bangalô+na+Praia" alt="Pacote Individual" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-praia-azul-escuro mb-2">Individual</h3>
                         <p class="text-gray-600 mb-4">Perfeito para viajantes solitários que buscam tranquilidade.</p>
@@ -215,7 +241,8 @@
                 
                 <!-- Pacote Duplo -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <img src="https://picsum.photos/400/250?random=10" alt="Pacote Duplo" class="w-full h-48 object-cover">
+                    <!-- IMAGEM TROCADA: Pôr do Sol em Maragogi -->
+                    <img src="https://placehold.co/400x250/4682B4/FFFFFF?text=Pôr+do+Sol+em+Maragogi" alt="Pacote Duplo" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-praia-azul-escuro mb-2">Duplo</h3>
                         <p class="text-gray-600 mb-4">Ideal para casais em busca de romance e privacidade.</p>
@@ -242,7 +269,8 @@
                 
                 <!-- Pacote Família -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <img src="https://picsum.photos/400/250?random=11" alt="Pacote Família" class="w-full h-48 object-cover">
+                    <!-- IMAGEM TROCADA: Família na Praia -->
+                    <img src="https://placehold.co/400x250/87CEEB/333333?text=Família+na+Praia" alt="Pacote Família" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-praia-azul-escuro mb-2">Família</h3>
                         <p class="text-gray-600 mb-4">Conforto e diversão para toda a família (3-6 pessoas).</p>
@@ -371,7 +399,7 @@
                         </p>
                         <p class="flex items-center">
                             <i class="fas fa-map-marker-alt mr-3"></i>
-                            Praia do Paraíso, 123 - Litoral Norte/SP
+                            Praia de Maragogi, 123 - Alagoas/AL
                         </p>
                     </div>
                 </div>
@@ -418,10 +446,14 @@
         // Modal functions
         function openReservaModal(pacote = '') {
             const modal = document.getElementById('reservaModal');
-            const pacoteSelect = modal.querySelector('select');
+            const pacoteSelect = modal.querySelector('select[required]'); // Mais específico
             
             if (pacote && pacoteSelect) {
-                pacoteSelect.value = pacote;
+                // Procura pelo seletor de pacotes e o define
+                const selectPacote = Array.from(modal.querySelectorAll('select')).find(s => s.querySelector('option[value="individual"]'));
+                if (selectPacote) {
+                    selectPacote.value = pacote;
+                }
             }
             
             modal.classList.remove('hidden');
@@ -437,9 +469,24 @@
         // Form submission
         document.getElementById('reservaForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Reserva enviada com sucesso! Entraremos em contato em breve para confirmar sua reserva.');
-            closeReservaModal();
-            this.reset();
+            
+            // --- ATENÇÃO ---
+            // Removido o alert() conforme as diretrizes.
+            // Em um app real, você enviaria os dados e mostraria uma mensagem de sucesso
+            // aqui, talvez trocando o conteúdo do formulário por uma mensagem.
+            //
+            // Exemplo de como mostrar uma mensagem de sucesso (simples):
+            const form = document.getElementById('reservaForm');
+            form.innerHTML = `<div class="text-center p-4">
+                                <i class="fas fa-check-circle text-praia-verde text-4xl mb-4"></i>
+                                <h3 class="text-2xl font-bold text-praia-azul-escuro mb-2">Reserva Enviada!</h3>
+                                <p class="text-gray-700">Obrigado! Entraremos em contato em breve para confirmar sua reserva.</p>
+                                <button type="button" onclick="closeReservaModal()" class="mt-6 bg-praia-azul text-white px-6 py-2 rounded-lg">Fechar</button>
+                             </div>`;
+            
+            // Se não quiser fechar automaticamente, remova a linha abaixo
+            // setTimeout(closeReservaModal, 3000); 
+            // this.reset(); // 'this' não funciona mais aqui, 'form' foi substituído
         });
 
         // Close modal when clicking outside
