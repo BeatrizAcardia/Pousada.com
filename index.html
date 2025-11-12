@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pousada Sirena das Pérolas</title>
+    <meta name="description" content="Pousada Sirena das Pérolas - Sua experiência paradisíaca à beira-mar">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'praia-azul': '#87CEEB',
+                        'praia-areia': '#F5F5DC',
+                        'praia-azul-escuro': '#4682B4',
+                        'praia-verde': '#20B2AA'
+                    },
+                    fontFamily: {
+                        'handwriting': ['Dancing Script', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-section {
+            /* IMAGEM TROCADA: Hero de Maragogi */
+            background-image: url('https://placehold.co/1920x1080/006699/FFFFFF?text=Praia+de+Maragogi');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .logo-font {
+            font-family: 'Dancing Script', cursive;
+            font-weight: 700;
+        }
+        .carousel-container {
+            scroll-behavior: smooth;
+        }
+
+        /* ADICIONADO: Garante a remoção da barra de rolagem do carrossel */
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+        .carousel-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<!-- ADICIONADO: overflow-x-hidden para remover barra de rolagem horizontal do site -->
+<body class="min-h-screen bg-white overflow-x-hidden">
+    <!-- App Bar -->
+    <header class="bg-gradient-to-r from-praia-azul to-praia-verde shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <!-- IMAGEM TROCADA: Logo placeholder -->
+                        <img src="https://placehold.co/48x48/FFFFFF/87CEEB?text=Logo" alt="Logo Pousada Sirena das Pérolas" class="w-12 h-12 rounded-full border-2 border-white shadow-md">
+                    <div class="text-white">
+                        <div class="font-arial text-sm">Pousada</div>
+                        <div class="logo-font text-2xl font-bold">Sirena das Pérolas</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-6">
+                    <a href="#inicio" class="text-white hover:text-praia-areia transition-colors duration-300 font-semibold">Início</a>
+                    <a href="#sobre" class="text-white hover:text-praia-areia transition-colors duration-300 font-semibold">Sobre</a>
+                    <a href="#servicos" class="text-white hover:text-praia-areia transition-colors duration-300 font-semibold">Serviços</a>
+                    <a href="#pacotes" class="text-white hover:text-praia-areia transition-colors duration-300 font-semibold">Pacotes</a>
+                    <a href="#reservas" class="text-white hover:text-praia-areia transition-colors duration-300 font-semibold">Reservas</a>
+                </div>
+                
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Landing Page Hero Section -->
+    <section id="inicio" class="hero-section min-h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="relative z-10 text-center text-white px-4 max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 logo-font">Bem-vindo ao Paraíso</h1>
+            <p class="text-xl md:text-2xl mb-8 leading-relaxed">
+                Localizada em uma das praias mais belas do litoral brasileiro, a Pousada Sirena das Pérolas oferece 
+                conforto, tranquilidade e uma experiência única à beira-mar. Venha viver momentos inesquecíveis 
+                em um ambiente acolhedor e familiar.
+            </p>
+            <button onclick="scrollToSection('sobre')" class="bg-praia-azul hover:bg-praia-azul-escuro text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Saiba mais
+            </button>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-20 bg-praia-areia">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <!-- IMAGEM TROCADA: Vista da Pousada em Maragogi -->
+                    <img src="https://placehold.co/600x400/87CEEB/333333?text=Vista+Pousada+Maragogi" alt="Vista da pousada" class="w-full rounded-lg shadow-xl">
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold text-praia-azul-escuro mb-8 logo-font">Nossa História</h2>
+                    <div class="space-y-6 text-gray-700">
+                        <p class="text-lg leading-relaxed">
+                            Fundada em 2010 por Maria e João Silva, a Pousada Sirena das Pérolas nasceu do sonho de 
+                            criar um refúgio à beira-mar onde os hóspedes pudessem se sentir em casa, cercados pela 
+                            natureza e pelo aconchego que só o litoral pode oferecer.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            Nossa missão é proporcionar experiências memoráveis através de um atendimento personalizado, 
+                            instalações confortáveis e um ambiente que celebra a cultura local e a beleza natural 
+                            do nosso litoral.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            Valorizamos a sustentabilidade, o respeito ao meio ambiente e o compromisso com a 
+                            satisfação de cada hóspede que nos honra com sua visita.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Carrossel -->
+    <section id="servicos" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-praia-azul-escuro mb-12 logo-font">Nossos Serviços</h2>
+            
+            <div class="relative">
+                <button onclick="scrollCarousel(-300)" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-80 hover:bg-opacity-100 w-10 h-10 rounded-full flex items-center justify-center shadow-lg border border-gray-200 -ml-5">
+                    <i class="fas fa-chevron-left text-praia-azul-escuro"></i>
+                </button>
+                
+                <div id="carousel" class="flex overflow-x-auto space-x-6 pb-6 snap-x snap-mandatory scrollbar-hide carousel-container">
+                    <!-- Piscina -->
+                    <div class="min-w-[300px] bg-white rounded-xl shadow-lg snap-center">
+                        <!-- IMAGEM TROCADA: Piscinas Naturais Maragogi -->
+                        <img src="https://placehold.co/300x200/20B2AA/FFFFFF?text=Piscinas+Naturais+Maragogi" alt="Piscina da pousada" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-praia-azul-escuro mb-2">Piscina</h3>
+                            <p class="text-gray-600">Piscina aquecida com vista para o mar, perfeita para relaxar após um dia de praia.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Área Pet (substituída por imagem de praia) -->
+                    <div class="min-w-[300px] bg-white rounded-xl shadow-lg snap-center">
+                        <!-- IMAGEM TROCADA: Praia com Coqueiros -->
+                        <img src="https://placehold.co/300x200/F5F5DC/333333?text=Praia+com+Coqueiros" alt="Praia com coqueiros" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-praia-azul-escuro mb-2">Pé na Areia</h3>
+                            <p class="text-gray-600">Acesso direto à praia, com cadeiras e guarda-sóis disponíveis para nossos hóspedes.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Quadra de Vôlei (substituída por imagem de praia) -->
+                    <div class="min-w-[300px] bg-white rounded-xl shadow-lg snap-center">
+                        <!-- IMAGEM TROCADA: Mar de Maragogi -->
+                        <img src="https://placehold.co/300x200/87CEEB/FFFFFF?text=Mar+de+Maragogi" alt="Quadra de vôlei" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-praia-azul-escuro mb-2">Quadra de Vôlei</h3>
+                            <p class="text-gray-600">Quadra de areia para partidas de vôlei e outros esportes de praia.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Brinquedoteca (substituída por imagem de praia) -->
+                    <div class="min-w-[300px] bg-white rounded-xl shadow-lg snap-center">
+                        <!-- IMAGEM TROCADA: Areia Branca -->
+                        <img src="https://placehold.co/300x200/4682B4/FFFFFF?text=Areia+Branca" alt="Areia da praia" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-praia-azul-escuro mb-2">Brinquedoteca</h3>
+                            <p class="text-gray-600">Espaço lúdico e seguro para as crianças se divertirem com diversos brinquedos.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Restaurante (substituída por imagem de praia) -->
+                    <div class="min-w-[300px] bg-white rounded-xl shadow-lg snap-center">
+                        <!-- IMAGEM TROCADA: Vista do Mar -->
+                        <img src="https://placehold.co/300x200/006699/FFFFFF?text=Vista+do+Mar" alt="Restaurante da pousada" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-praia-azul-escuro mb-2">Restaurante</h3>
+                            <p class="text-gray-600">Culinária regional com ingredientes frescos e menu variado para todos os gostos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button onclick="scrollCarousel(300)" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-80 hover:bg-opacity-100 w-10 h-10 rounded-full flex items-center justify-center shadow-lg border border-gray-200 -mr-5">
+                    <i class="fas fa-chevron-right text-praia-azul-escuro"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pacotes Section -->
+    <section id="pacotes" class="py-20 bg-praia-areia">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-praia-azul-escuro mb-12 logo-font">Nossos Pacotes</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pacote Individual -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <!-- IMAGEM TROCADA: Bangalô na Praia -->
+                    <img src="https://placehold.co/400x250/20B2AA/FFFFFF?text=Bangalô+na+Praia" alt="Pacote Individual" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-praia-azul-escuro mb-2">Individual</h3>
+                        <p class="text-gray-600 mb-4">Perfeito para viajantes solitários que buscam tranquilidade.</p>
+                        <div class="text-3xl font-bold text-praia-verde mb-4">R$ 150<span class="text-sm text-gray-500">/noite</span></div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-praia-verde mr-2"></i>
+                                Café da manhã incluso
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-praia-verde mr-2"></i>
+                                Wi-Fi gratuito
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-praia-verde mr-2"></i>
+                                Acesso à piscina
+                            </li>
+                        </ul>
+                        <button onclick="openReservaModal('individual')" class="w-full bg-praia-azul hover:bg-praia-azul-escuro text-white py-3 rounded-lg font-semibold transition-colors duration-300">
+                            Reservar Agora
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Pacote Duplo -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <!-- IMAGEM TROCADA: Pôr do Sol em Maragogi -->
+                    <img src="https://placehold.co/400x250/4682B4/FFFFFF?text=Pôr+do+Sol+em+Maragogi" alt="Pacote Duplo" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-praia-azul-escuro mb-2">Duplo</h3>
+                        <p class="text-gray-600 mb-4">Ideal para casais em busca de romance e privacidade.</p>
+                        <div class="text-3xl font-bold text-praia-verde mb-4">R$ 250<span class="text-sm text-gray-500">/noite</span></div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-praia-verde mr-2"></i>
+                                Café da manhã de cortesia
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-praia-verde mr-2"></i>
+                                Jantar romântico
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-praia-verde mr-2"></i>
+                                Massagem relaxante
+                            </li>
+                        </ul>
+                        <button onclick="openReservaModal('duplo')" class="w-full bg-praia-azul hover:bg-praia-azul-escuro text-white py-3 rounded-lg font-semibold transition-colors duration-300">
+                            Reservar Agora
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Pacote Família -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <!-- IMAGEM TROCADA: Família na Praia -->
+                    <img src="https://placehold.co/400x250/87CEEB/333333?text=Família+na+Praia" alt="Pacote Família" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-praia-azul-escuro mb-2">Família</h3>
+                        <p class="text-gray-600 mb-4">Conforto e diversão para toda a família (3-6 pessoas).</p>
+                        <div class="text-3xl font-bold text-praia-verde mb-4">R$ 400<span class="text-sm text-gray-500">/noite</span></div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-praia-verde mr-2"></i>
+                                Café da manhã completo
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-praia-verde mr-2"></i>
+                                Atividades para crianças
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-praia-verde mr-2"></i>
+                                Suíte familiar
+                            </li>
+                        </ul>
+                        <button onclick="openReservaModal('familia')" class="w-full bg-praia-azul hover:bg-praia-azul-escuro text-white py-3 rounded-lg font-semibold transition-colors duration-300">
+                            Reservar Agora
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botão Fixo Reservar Agora -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="openReservaModal()" class="bg-praia-verde hover:bg-praia-azul-escuro text-white px-6 py-3 rounded-full font-semibold shadow-lg transform hover:scale-110 transition-all duration-300 flex items-center space-x-2">
+            <i class="fas fa-calendar-check"></i>
+            <span>Reservar Agora</span>
+        </button>
+    </div>
+
+    <!-- Modal de Reservas -->
+    <div id="reservaModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-praia-azul-escuro">Fazer Reserva</h3>
+                    <button onclick="closeReservaModal()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <form id="reservaForm" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+                        <input type="text" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-praia-azul">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Número de Pessoas</label>
+                        <select required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-praia-azul">
+                            <option value="">Selecione</option>
+                            <option value="1">1 pessoa</option>
+                            <option value="2">2 pessoas</option>
+                            <option value="3">3 pessoas</option>
+                            <option value="4">4 pessoas</option>
+                            <option value="5">5 pessoas</option>
+                            <option value="6">6 pessoas</option>
+                        </select>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Data de Entrada</label>
+                            <input type="date" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-praia-azul">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Data de Saída</label>
+                            <input type="date" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-praia-azul">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Pacote</label>
+                        <select required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-praia-azul">
+                            <option value="">Selecione o pacote</option>
+                            <option value="individual">Individual - R$ 150/noite</option>
+                            <option value="duplo">Duplo - R$ 250/noite</option>
+                            <option value="familia">Família - R$ 400/noite</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                        <input type="email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-praia-azul">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                        <input type="tel" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-praia-azul">
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-praia-azul hover:bg-praia-azul-escuro text-white py-3 rounded-lg font-semibold transition-colors duration-300">
+                        Confirmar Reserva
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-praia-azul to-praia-verde text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 logo-font">Pousada Sirena das Pérolas</h3>
+                    <p class="text-praia-areia leading-relaxed">
+                        Sua experiência paradisíaca à beira-mar. Conforto, tranquilidade e momentos inesquecíveis.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Contato</h4>
+                    <div class="space-y-2 text-praia-areia">
+                        <p class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            (11) 99999-9999
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            contato@sirenadasperolas.com
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            Praia de Maragogi, 123 - Alagoas/AL
+                        </p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-white text-praia-azul w-10 h-10 rounded-full flex items-center justify-center hover:bg-praia-areia transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-white text-praia-azul w-10 h-10 rounded-full flex items-center justify-center hover:bg-praia-areia transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-white text-praia-azul w-10 h-10 rounded-full flex items-center justify-center hover:bg-praia-areia transition-colors duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-praia-areia border-opacity-30 mt-8 pt-8 text-center text-praia-areia">
+                <p>&copy; 2024 Pousada Sirena das Pérolas. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll function
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // Carousel navigation functions
+        function scrollCarousel(direction) {
+            const carousel = document.getElementById('carousel');
+            carousel.scrollBy({
+                left: direction,
+                behavior: 'smooth'
+            });
+        }
+
+        // Modal functions
+        function openReservaModal(pacote = '') {
+            const modal = document.getElementById('reservaModal');
+            const pacoteSelect = modal.querySelector('select[required]'); // Mais específico
+            
+            if (pacote && pacoteSelect) {
+                // Procura pelo seletor de pacotes e o define
+                const selectPacote = Array.from(modal.querySelectorAll('select')).find(s => s.querySelector('option[value="individual"]'));
+                if (selectPacote) {
+                    selectPacote.value = pacote;
+                }
+            }
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeReservaModal() {
+            const modal = document.getElementById('reservaModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Form submission
+        document.getElementById('reservaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // --- ATENÇÃO ---
+            // Removido o alert() conforme as diretrizes.
+            // Em um app real, você enviaria os dados e mostraria uma mensagem de sucesso
+            // aqui, talvez trocando o conteúdo do formulário por uma mensagem.
+            //
+            // Exemplo de como mostrar uma mensagem de sucesso (simples):
+            const form = document.getElementById('reservaForm');
+            form.innerHTML = `<div class="text-center p-4">
+                                <i class="fas fa-check-circle text-praia-verde text-4xl mb-4"></i>
+                                <h3 class="text-2xl font-bold text-praia-azul-escuro mb-2">Reserva Enviada!</h3>
+                                <p class="text-gray-700">Obrigado! Entraremos em contato em breve para confirmar sua reserva.</p>
+                                <button type="button" onclick="closeReservaModal()" class="mt-6 bg-praia-azul text-white px-6 py-2 rounded-lg">Fechar</button>
+                             </div>`;
+            
+            // Se não quiser fechar automaticamente, remova a linha abaixo
+            // setTimeout(closeReservaModal, 3000); 
+            // this.reset(); // 'this' não funciona mais aqui, 'form' foi substituído
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('reservaModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeReservaModal();
+            }
+        });
+
+        // Navigation smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
